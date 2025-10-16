@@ -1,5 +1,5 @@
-// --- CORRECTED backend/src/index.js ---
-require('dotenv').config(); // Ensure this is the absolute first line
+// backend/src/index.js
+require('dotenv').config(); // First line!
 
 const express = require('express');
 const optimizeRouter = require('./routes/optimize');
@@ -7,9 +7,16 @@ const cors = require('cors');
 
 const app = express();
 
-// --- Middleware Setup ---
-app.use(cors());
-app.use(express.json()); // Use the built-in express.json() middleware
+// --- CORRECT CORS CONFIGURATION ---
+// Define the allowed origin. This should be your Vercel frontend URL.
+const corsOptions = {
+  origin: 'https://your-frontend-app-name.vercel.app' // IMPORTANT: Replace with your actual Vercel URL
+};
+
+// Use the cors middleware with the options
+app.use(cors(corsOptions));
+
+app.use(express.json());
 
 // --- Routes Setup ---
 app.use('/api/optimize', optimizeRouter);
