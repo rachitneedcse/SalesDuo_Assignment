@@ -1,3 +1,4 @@
+
 const express = require('express');
 const bodyParser = require('express').json;
 const optimizeRouter = require('./routes/optimize');
@@ -5,7 +6,6 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 
 dotenv.config();
-console.log("Loaded GEMINI_API_KEY:", process.env.GEMINI_API_KEY ? "✅" : "❌ Missing");
 
 const app = express();
 app.use(cors());
