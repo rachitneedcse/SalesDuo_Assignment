@@ -1,3 +1,4 @@
+dotenv.config();
 
 const express = require('express');
 const bodyParser = require('express').json;
@@ -5,7 +6,7 @@ const optimizeRouter = require('./routes/optimize');
 const dotenv = require('dotenv');
 const cors = require('cors');
 
-dotenv.config();
+
 
 const app = express();
 app.use(cors());
