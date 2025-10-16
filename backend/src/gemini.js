@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY ;
 
 
-console.log(OPENROUTER_KEY);
+
 if (!OPENROUTER_KEY) console.warn('OPENROUTER_API_KEY not set - set it in .env');
 
 async function generateOptimizations(original){
