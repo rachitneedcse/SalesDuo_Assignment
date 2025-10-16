@@ -12,7 +12,7 @@ This is a full-stack web application designed to optimize Amazon product listing
 ## Tech Stack
 
 -   **Frontend:** React.js
--   **Backend:** Node.js, Express.js
+-   **Backend:** Node.js
 -   **Database:** MySQL
 -   **AI Service:** OpenRouter API (acting as a gateway to various LLMs)
 -   **Dependencies:** `mysql2`, `node-fetch`, `dotenv`, `cors`, `express`
