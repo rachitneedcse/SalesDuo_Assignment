@@ -5,7 +5,7 @@ export default function History(){
   const [rows, setRows] = useState([]);
   const fetch = async () => {
     try {
-      const res = await axios.get(`http://localhost:4000/api/optimize/history/${asin}`);
+      const res = await axios.get(`https://salesduo-assignment.onrender.com/api/optimize/history/${asin}`);
       setRows(res.data);
     } catch(e){ alert(e.message) }
   };

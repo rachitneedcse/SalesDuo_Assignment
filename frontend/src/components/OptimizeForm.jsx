@@ -8,7 +8,7 @@ export default function OptimizeForm(){
     e.preventDefault();
     setLoading(true); setResult(null);
     try {
-      const res = await axios.post('http://localhost:4000/api/optimize', { asin });
+      const res = await axios.post('https://salesduo-assignment.onrender.com/api/optimize', { asin });
       setResult(res.data);
     } catch (err) {
       alert(err?.response?.data?.error || err.message);
