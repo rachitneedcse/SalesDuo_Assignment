@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 async function fetchProductFromASIN(asin){
-    // Basic Amazon product page fetch - may fail on Amazon bot protections.
+    
     const url = `https://www.amazon.in/dp/${asin}`;
     const headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0 Safari/537.36',
@@ -15,7 +15,7 @@ async function fetchProductFromASIN(asin){
         const text = $(el).text().replace(/\n|\r/g,' ').trim();
         if (text) bullets.push(text);
     });
-    // fallback selectors
+    
     if (bullets.length === 0) {
         $('ul.a-unordered-list.a-vertical li').each((i, el) => {
             const text = $(el).text().trim();
